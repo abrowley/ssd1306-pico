@@ -9,5 +9,5 @@ project(ssd1306-pico)
 pico_sdk_init()
 
 add_library(${PROJECT_NAME} src/ssd1306.c)
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_i2c)
